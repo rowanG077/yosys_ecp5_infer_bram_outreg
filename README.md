@@ -8,5 +8,7 @@ Plugin for yosys that allows inference of output registers on the ECP5 DP16KD me
 
 # Usage:
 
-Run yosys with `"-m ecp5_infer_bram_outreg.so"`. Then use the `"ecp5_infer_bram_outreg"`
-command after running synthesis for the ECP5 (`"synth_ecp5 ..."`).
+Run yosys with `"-m ecp5_infer_bram_outreg.so"`. Then use the `"ecp5_infer_bram_outreg"` 
+command after running synthesis for the ECP5 (`"synth_ecp5 ..."`). Note that it
+requires `no-rw-check` for blockrams since the extra logic is placed on the output
+of the memories.
